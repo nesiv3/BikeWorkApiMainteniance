@@ -23,9 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o0*tj%@ttx5+m-(duxmccn*+t-9xe&xgb-@(qga0%vh2dwmmj$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['bikeworkapp-bvcqfra5fucnajen.brazilsouth-01.azurewebsites.net']
+ALLOWED_HOSTS = [
+    'bikeworkapp-bvcqfra5fucnajen.brazilsouth-01.azurewebsites.net',
+    '127.0.0.1',
+    'localhost',
+]
 
 
 # Application definition
