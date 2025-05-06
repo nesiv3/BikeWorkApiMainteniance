@@ -14,7 +14,7 @@ COPY . /app
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
 # Expone el puerto 8000
-EXPOSE 8080
+EXPOSE 8081
 
 # Comando para ejecutar el servidor de desarrollo
-CMD ["python", "bikework_api_maintenance/manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "bikework_api_maintenance/manage.py", "runserver", "0.0.0.0:8081"]
