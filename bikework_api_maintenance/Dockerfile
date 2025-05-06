@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copia el archivo requirements.txt al contenedor
-COPY /requirements.txt /app/requirements.txt
+COPY requirements.txt /app/requirements.txt
 
 # Copia los archivos del proyecto al contenedor
 COPY . /app
@@ -14,7 +14,7 @@ COPY . /app
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
 # Expone el puerto 8000
-EXPOSE 8000
+EXPOSE 8080
 
 # Comando para ejecutar el servidor de desarrollo
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
