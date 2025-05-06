@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copia el archivo requirements.txt al contenedor
-COPY /bikework_api_maintenance/requirements.txt /app/requirements.txt
+COPY requirements.txt /app/requirements.txt
 
 # Copia los archivos del proyecto al contenedor
 COPY . /app
