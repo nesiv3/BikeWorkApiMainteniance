@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o0*tj%@ttx5+m-(duxmccn*+t-9xe&xgb-@(qga0%vh2dwmmj$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -76,8 +76,15 @@ WSGI_APPLICATION = 'bikework_api_maintenance.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'bikewkdate',  # nombre de tu base de datos
+        'USER': 'admin',
+        'PASSWORD': '5R2vphq5eBpF6NyYtnUT',
+        'HOST': 'bikework.c14m8cy28c9m.us-east-2.rds.amazonaws.com',  # o localhost si es local
+        'PORT': '3306',  # por defecto
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
     }
 }
 

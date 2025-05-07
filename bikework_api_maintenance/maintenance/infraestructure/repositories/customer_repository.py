@@ -1,5 +1,5 @@
 from maintenance.domain.models import Customer as CustomerDomain
-from maintenance.infraestructure.orm.models import Customer as CustomerORM
+from maintenance.infraestructure.models.customer_model import Customer as CustomerORM
 
 class CustomerRepository:
     def get_all(self):
